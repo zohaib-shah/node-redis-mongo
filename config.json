@@ -1,0 +1,8 @@
+{
+	"mongo_host":"127.0.0.1",
+	"mongo_db":"students",
+	"mongo_port":"27017",
+	"redis_host":"127.0.0.1",
+	"redis_port":"6379"
+
+}

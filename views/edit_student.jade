@@ -1,0 +1,20 @@
+extends layout
+block content
+	h1 Edit Student Form (Picked from #{source})
+	p
+		form(method='POST' action='/post-student')
+			input(type='hidden' name='student_id' value=st.id)
+			p
+				span First Name
+				input(type='text' name='first_name' value=st.first_name)
+			p
+				span Last Name
+				input(type='text' name='last_name' value=st.last_name)
+			p
+				span Class
+				input(type='text' name='class' value=st.class)
+			p
+				span age
+				input(type='number' name='age' value=st.age)
+			p
+				input(type='submit' value='Edit Student')

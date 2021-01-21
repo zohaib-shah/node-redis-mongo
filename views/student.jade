@@ -1,0 +1,37 @@
+extends layout
+block content
+	h1 Student Form
+	p
+		form(method='POST' action='/post-student')
+			p
+				span First Name
+				input(type='text' name='first_name')
+			p
+				span Last Name
+				input(type='text' name='last_name')
+			p
+				span Class
+				input(type='text' name='class')
+			p
+				span age
+				input(type='number' name='age')
+			p
+				input(type='submit' value='Add Student')
+	p
+		table(border=1)
+			tr
+				th ID
+				th First Name
+				th Last Name
+				th Class
+				th Age
+				th Edit
+			each st in students
+				tr
+					td #{st.id}
+					td #{st.first_name}
+					td #{st.last_name}
+					td #{st.class}
+					td #{st.age}
+					td
+						a(href="/edit-student/"+st.id) Edit

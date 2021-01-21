@@ -1,0 +1,21 @@
+Utilizing Redis Cache for MongoDB on Node / Express
+
+This simple repo have mongoose / redis / express combined in a way that
+whenever a record is added to MongoDB through mongoose package, it is also 
+added to redis cache.
+
+When retrieving the same record, The code first checks if the same records
+is present in the redis if so it fetches it from Redis otherwise it fetches
+it from the MongoDB.
+
+This repo assumes that you already have Node, Redis and MongoDB setup on your
+computer.
+
+For Ubuntu, You can install them with following commands:
+1- sudo apt install mongodb
+2- sudo apt install redis-server
+
+The available routes are:
+1- /add-student
+2- /edit-student
+3- /post-student
